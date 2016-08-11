@@ -5,7 +5,7 @@
 {% if grains['os_family']=="Debian" %}
 {% if use_ppa is not none %}
 
-{% set ppa_name        = salt['pillar.get']('php:ppa_name', 'ondrej/php5') %}
+{% set ppa_name        = salt['pillar.get']('php:ppa_name', 'ondrej/php') %}
 
 php54:
     pkgrepo.managed:
