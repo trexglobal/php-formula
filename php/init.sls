@@ -11,7 +11,7 @@ php54:
     pkgrepo.managed:
         - ppa: {{ ppa_name }}
     pkg.latest:
-        - name: php5
+        - name: php5.5
         - refresh: True
 {% endif %}
 {% endif %}
