@@ -13,6 +13,7 @@ php54:
     pkg.latest:
         - name: php5.6
         - refresh: True
+        - force_yes: True
 {% endif %}
 {% endif %}
 
