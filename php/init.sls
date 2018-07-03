@@ -10,6 +10,11 @@
 php54:
     pkgrepo.managed:
         - ppa: {{ ppa_name }}
+        - keyid: E5267A6C
+        - keyserver: keyserver.ubuntu.com
+    cmd.run:
+        - name: 'apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C'
+        - unless: 'apt-key list | grep Launchpad'
     pkg.latest:
         - name: php5.6
         - refresh: True
